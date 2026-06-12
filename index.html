@@ -1176,19 +1176,39 @@
     // Sync dots with features-scroller scroll position
     const scroller = document.querySelector('.features-scroller');
     const scrollDots = document.querySelectorAll('.scroller-dot');
+    const slides = scroller ? scroller.querySelectorAll('.pulse-showcase-card') : [];
 
-    if (scroller && scrollDots.length > 0) {
+    if (scroller && scrollDots.length > 0 && slides.length > 0) {
+      // Helper to compute correct scroll position for a given slide index
+      const getSlideScrollPosition = (idx) => {
+        if (!slides[idx]) return 0;
+        return slides[idx].offsetLeft - scroller.offsetLeft;
+      };
+
       scroller.addEventListener('scroll', () => {
-        const index = Math.round(scroller.scrollLeft / scroller.clientWidth);
+        const scrollLeft = scroller.scrollLeft;
+        let activeIndex = 0;
+        let minDiff = Infinity;
+
+        slides.forEach((slide, idx) => {
+          const slidePos = getSlideScrollPosition(idx);
+          const diff = Math.abs(scrollLeft - slidePos);
+          if (diff < minDiff) {
+            minDiff = diff;
+            activeIndex = idx;
+          }
+        });
+
         scrollDots.forEach((dot, idx) => {
-          dot.classList.toggle('active', idx === index);
+          dot.classList.toggle('active', idx === activeIndex);
         });
       });
 
       scrollDots.forEach((dot, idx) => {
         dot.addEventListener('click', () => {
+          const targetLeft = getSlideScrollPosition(idx);
           scroller.scrollTo({
-            left: idx * scroller.clientWidth,
+            left: targetLeft,
             behavior: 'smooth'
           });
         });
