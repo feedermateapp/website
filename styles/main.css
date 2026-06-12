@@ -940,6 +940,55 @@ footer {
   }
 }
 
+/* Sliding Brand Features Carousel */
+.features-scroller {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 24px;
+  padding-bottom: 12px;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 16px;
+}
+
+.features-scroller::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari/Opera */
+}
+
+.features-scroller {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.features-scroller .pulse-showcase-card {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  margin-top: 0; /* Override default margin */
+}
+
+.scroller-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.scroller-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: background-color 0.25s, transform 0.25s;
+}
+
+.scroller-dot.active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+
 /* Beta Dialog Input & Form Focus States */
 .beta-content {
   width: min(92vw, 440px) !important;

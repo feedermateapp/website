@@ -366,50 +366,96 @@
       </div>
     </section>
 
-    <section class="container section" id="session-pulse">
-      <div class="pulse-showcase-card">
-        <div class="pulse-badge"><i class="fa-solid fa-heart-pulse"></i> NEW BRAND FEATURE</div>
-        <div class="pulse-content">
-          <h2>Introducing Session Pulse Analysis</h2>
-          <p class="lead">Evolve your session log from a raw catch list into a living visual rhythm. FeederMate now
-            tracks casting momentum, catch spikes, and feed intervals to generate a premium ECG-style heartbeat
-            fingerprint of your session.</p>
-
-          <div class="pulse-features-grid">
-            <div class="pulse-feature-item">
-              <i class="fa-solid fa-chart-line"></i>
-              <div>
-                <h4>ECG Session Fingerprint</h4>
-                <p class="muted">Visualize peak action, recovery spells, and feeding momentum in a smooth curved chart.
-                </p>
+    <section class="container section" id="brand-features">
+      <h2><i class="fa-solid fa-star"></i>Brand Features</h2>
+      <div class="features-scroller">
+        
+        <!-- Feature 1: Multi-Rod Support (v1.6.0) -->
+        <div class="pulse-showcase-card">
+          <div class="pulse-badge"><i class="fa-solid fa-code-branch"></i> NEW IN v1.6.0</div>
+          <div class="pulse-content">
+            <h2>Introducing Multi-Rod Support</h2>
+            <p class="lead">Anglers can now track up to two rods concurrently in Casual session mode. Easily switch between rod tabs, monitor independent cast timers, set separate distance presets, and log rod-specific catches at a glance.</p>
+            
+            <div class="pulse-features-grid">
+              <div class="pulse-feature-item">
+                <i class="fa-solid fa-layer-group"></i>
+                <div>
+                  <h4>Independent Rod Tabs</h4>
+                  <p class="muted">Switch between Rod 1 and Rod 2 instantly with tab controls embedded right in the presets panel.</p>
+                </div>
               </div>
-            </div>
-            <div class="pulse-feature-item">
-              <i class="fa-solid fa-hourglass-half"></i>
-              <div>
-                <h4>Period & Window Detection</h4>
-                <p class="muted">Find your exact 40-minute peak biting window and automatic dead-zone inactivity lulls.
-                </p>
+              <div class="pulse-feature-item">
+                <i class="fa-solid fa-spinner"></i>
+                <div>
+                  <h4>Rod Active Indicators</h4>
+                  <p class="muted">Pulsing glow indicators on the tabs let you see if a rod's cast timer is currently active without switching screens.</p>
+                </div>
               </div>
-            </div>
-            <div class="pulse-feature-item">
-              <i class="fa-solid fa-brain"></i>
-              <div>
-                <h4>Automated Bank Insights</h4>
-                <p class="muted">Get local, context-aware textual summaries explaining catch consistency and pacing
-                  fatigue.</p>
+              <div class="pulse-feature-item">
+                <i class="fa-solid fa-ruler-horizontal"></i>
+                <div>
+                  <h4>Separate Distance Presets</h4>
+                  <p class="muted">Configure different work-distances for each rod to optimize your tactical logs on the bank.</p>
+                </div>
               </div>
-            </div>
-            <div class="pulse-feature-item">
-              <i class="fa-solid fa-signature"></i>
-              <div>
-                <h4>Pulse Sparklines</h4>
-                <p class="muted">Review completed sessions with their miniature sparkline fingerprint in the history
-                  list.</p>
+              <div class="pulse-feature-item">
+                <i class="fa-solid fa-tags"></i>
+                <div>
+                  <h4>Rod-Attributed History</h4>
+                  <p class="muted">Logged catches display R1 and R2 badges in the feed, letting you analyze which rod was most productive.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Feature 2: Session Pulse Analysis (v1.3.0) -->
+        <div class="pulse-showcase-card">
+          <div class="pulse-badge"><i class="fa-solid fa-heart-pulse"></i> NEW IN v1.3.0</div>
+          <div class="pulse-content">
+            <h2>Session Pulse Analysis</h2>
+            <p class="lead">Evolve your session log from a raw catch list into a living visual rhythm. FeederMate tracks casting momentum, catch spikes, and feed intervals to generate a premium rhythm-style heartbeat fingerprint of your session.</p>
+
+            <div class="pulse-features-grid">
+              <div class="pulse-feature-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <div>
+                  <h4>Activity Session Fingerprint</h4>
+                  <p class="muted">Visualize peak action, recovery spells, and feeding momentum in a smooth curved chart.</p>
+                </div>
+              </div>
+              <div class="pulse-feature-item">
+                <i class="fa-solid fa-hourglass-half"></i>
+                <div>
+                  <h4>Period &amp; Window Detection</h4>
+                  <p class="muted">Find your exact 40-minute peak biting window and automatic dead-zone inactivity lulls.</p>
+                </div>
+              </div>
+              <div class="pulse-feature-item">
+                <i class="fa-solid fa-brain"></i>
+                <div>
+                  <h4>Automated Bank Insights</h4>
+                  <p class="muted">Get local, context-aware summaries explaining catch consistency and pacing fatigue.</p>
+                </div>
+              </div>
+              <div class="pulse-feature-item">
+                <i class="fa-solid fa-signature"></i>
+                <div>
+                  <h4>Pulse Sparklines</h4>
+                  <p class="muted">Review completed sessions with their miniature sparkline fingerprint in the history list.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroller Navigation Dots -->
+      <div class="scroller-dots">
+        <span class="scroller-dot active" data-index="0"></span>
+        <span class="scroller-dot" data-index="1"></span>
       </div>
     </section>
 
@@ -471,7 +517,7 @@
         </figure>
         <figure class="screenshot-frame">
           <img src="assets/screenshots/1000003124.webp"
-            alt="Session Pulse analytics — ECG-style fishing rhythm chart with Peak Pulse, Stability and Dead Zone metrics"
+            alt="Session Pulse analytics — Rhythm-style fishing activity chart with Peak Pulse, Stability and Dead Zone metrics"
             loading="lazy" role="button" aria-haspopup="dialog" />
           <figcaption>Session Pulse</figcaption>
         </figure>
@@ -1124,6 +1170,28 @@
             btnSubmitBeta.disabled = false;
             btnSubmitBeta.innerHTML = '<i class="fa-solid fa-paper-plane"></i>Request Invitation';
           });
+      });
+    }
+
+    // Sync dots with features-scroller scroll position
+    const scroller = document.querySelector('.features-scroller');
+    const scrollDots = document.querySelectorAll('.scroller-dot');
+
+    if (scroller && scrollDots.length > 0) {
+      scroller.addEventListener('scroll', () => {
+        const index = Math.round(scroller.scrollLeft / scroller.clientWidth);
+        scrollDots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === index);
+        });
+      });
+
+      scrollDots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+          scroller.scrollTo({
+            left: idx * scroller.clientWidth,
+            behavior: 'smooth'
+          });
+        });
       });
     }
   </script>
